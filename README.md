@@ -1,6 +1,6 @@
 # apix
 
-`apix` is a lightweight JavaScript utility for making HTTP requests with built-in support for retries, timeouts, and automatic JSON parsing.
+apix is a lightweight JavaScript utility designed for making HTTP requests to REST APIs. It includes built-in support for retries, timeouts, and automatic JSON parsing. When making a request, apix ensures that the response is valid by checking if the request was successful and verifying that the response format is JSON before parsing it.
 
 ## Installation
 
