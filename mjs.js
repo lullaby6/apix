@@ -28,22 +28,17 @@ function apix(url, options = {}) {
 
             clearTimeout(timeoutId);
 
-            if (!response.ok) {
-                throw new Error(`Request failed with status ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
 
             const contentType = response.headers.get("Content-Type");
-            if (contentType && contentType.includes("application/json")) {
-                return await response.json();
-            } else {
-                throw new Error("Response is not in JSON format");
-            }
+            if (contentType && contentType.includes("application/json")) return await response.json();
+
+            throw new Error("Response is not in JSON format");
         } catch (error) {
             clearTimeout(timeoutId);
 
-            if (error.name === "AbortError") {
-                throw new Error("Request timed out");
-            } else if (attempt < retries) {
+            if (error.name === "AbortError") throw new Error("Request timed out");
+            else if (attempt < retries) {
                 console.warn(`Retry attempt ${attempt + 1} failed: ${error.message}`);
                 await new Promise(resolve => setTimeout(resolve, retryDelay));
                 return retry(attempt + 1);
