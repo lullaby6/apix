@@ -2,8 +2,8 @@
   "name": "@lullaby6/apix",
   "version": "1.0.0",
   "description": "Easy API Rest requests",
-  "main": "cjs.min.js",
-  "module": "mjs.min.js",
+  "main": "apix.cjs.min.js",
+  "module": "apix.mjs.min.js",
   "scripts": {
     "push": "git add . && git commit -m 'publish' && git push",
     "publish": "npm publish --access=public",
