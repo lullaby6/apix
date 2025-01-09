@@ -2,8 +2,8 @@
   "name": "@lullaby6/apix",
   "version": "1.0.0",
   "description": "Easy API Rest requests",
-  "main": "apix.cjs.min.js",
-  "module": "apix.mjs.min.js",
+  "main": "apix.min.cjs.js",
+  "module": "apix.min.mjs.js",
   "scripts": {
     "push": "git add . && git commit -m 'publish' && git push",
     "publish": "npm publish --access=public",
@@ -21,11 +21,11 @@
     "axios",
     "rest"
   ],
-  "author": "lullaby6",
+  "author": "github.com/lullaby6",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lullaby6/apix"
+    "url": "git+https://github.com/lullaby6/apix.git"
   },
   "homepage": "https://github.com/lullaby6/apix"
 }
